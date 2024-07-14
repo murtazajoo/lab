@@ -4,7 +4,7 @@ import SemenExam from "@/components/custom/semen";
 
 export default function page() {
     return (
-        <CustomHolder temopName="RF">
+        <CustomHolder temopName="SEMEN Exam">
             <SemenExam />
         </CustomHolder>
     );
