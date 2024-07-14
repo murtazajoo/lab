@@ -111,5 +111,99 @@ const TEMPLATES: {
             },
         ],
     },
+    {
+        id: 3,
+        test_type: "Uric Acid",
+        results: [
+            {
+                test_name: "Uric Acid",
+                result: 5.82,
+                bold: false,
+                unit: "Mg/dl",
+                normal_range: "3 - 7",
+            },
+        ],
+    },
+    {
+        id: 4,
+        test_type: "KFT New",
+        results: [
+            {
+                test_name: "Blood Urea",
+                result: 21.24,
+                unit: "Mg/dl",
+                normal_range: "15 - 50",
+                bold: false,
+            },
+            {
+                test_name: "Sr. Creatinine",
+                result: 0.76,
+                unit: "Mg/dl",
+                normal_range: "0.5 - 1.5",
+                bold: false,
+            },
+        ],
+    },
+    {
+        id: 5,
+        test_type: "Lipid Profile",
+        results: [
+            {
+                test_name: "Sr. Triglycerides",
+                result: 99.45,
+                unit: "Mg/dl",
+                normal_range: "40 - 165",
+                bold: false,
+            },
+            {
+                test_name: "Sr. Cholesterol",
+                result: 120.62,
+                unit: "Mg/dl",
+                normal_range: "120 - 230",
+                bold: false,
+            },
+            {
+                test_name: "LDL",
+                result: 61.31,
+                unit: "Mg/dl",
+                normal_range: "-190",
+                bold: false,
+            },
+            {
+                test_name: "HDL Cholesterol",
+                result: 39.42,
+                unit: "Mg/dl",
+                normal_range: "30 - 100",
+                bold: false,
+            },
+            {
+                test_name: "VLDL",
+                result: 19.89,
+                unit: "Mg/dl",
+                normal_range: "20 - 40",
+                bold: false,
+            },
+        ],
+    },
+    {
+        id: 6,
+        test_type: "U Pro",
+        results: [
+            {
+                test_name: "Total Value",
+                result: 2850,
+                unit: "ml/24 Hrs",
+                normal_range: "800 - 2000 ml/24 Hrs",
+                bold: false,
+            },
+            {
+                test_name: "Total Protein",
+                result: 65,
+                unit: "mg/24 Hrs",
+                normal_range: "30 - 150 mg/24 Hrs",
+                bold: false,
+            },
+        ],
+    },
 ];
 export default TEMPLATES;
