@@ -16,7 +16,7 @@ export default function ReportCard({ templateID }: { templateID: string }) {
     }, []);
 
     return (
-        <div className="relative">
+        <div className="relative ">
             <ReportHeader />
             <ReportResult />
         </div>

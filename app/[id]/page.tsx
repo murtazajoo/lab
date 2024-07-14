@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import useTestReportStore from "@/lib/store/testStore";
 import TEMPLATES from "@/lib/templates";
 import { Printer } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { useParams } from "next/navigation";
@@ -41,8 +42,17 @@ export default function Home() {
             </div>
             <main
                 ref={printRef}
-                className="h-[11.69in]  text-black w-[8.27in] border  pt-[5cm] px-[2.95mm]  bg-white "
+                className="h-[11.69in] relative main-card text-black w-[8.27in] border    bg-white "
             >
+                <Image
+                    src={"/mid.png"}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="absolute bottom-[60mm] opacity-50 right-0 object-cover w-[30mm] h-[155mm]"
+                />
+                <Image src={"/head.png"} alt="" width={1000} height={1000} />
+                <div className="h-2"></div>
                 <ReportCard templateID={id as string} />
                 {/* 
                 <QRCodeSVG
@@ -55,6 +65,13 @@ export default function Home() {
                     level={"L"}
                     includeMargin={true}
                 /> */}
+                <Image
+                    src={"/foot.png"}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="absolute bottom-0 w-[210mm]"
+                />
             </main>
             <div className="flex gap-2 justify-end w-[210mm] py-3 ">
                 <Button onClick={addRow} variant={"secondary"}>

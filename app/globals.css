@@ -85,3 +85,7 @@ select {
     text-indent: 1px;
     text-overflow: "";
 }
+
+.main-card input {
+    background-color: transparent;
+}

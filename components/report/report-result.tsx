@@ -13,8 +13,8 @@ export default function ReportResult() {
     );
 
     return (
-        <div className="mt-20 ">
-            <Table className="w-[200mm]">
+        <div className="mt-10 ">
+            <Table className="w-[200mm] mx-auto">
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[100px]">Test Name</TableHead>
