@@ -1,7 +1,6 @@
 import useTestReportStore from "@/lib/store/testStore";
 import TEMPLATES from "@/lib/templates";
 import { useEffect } from "react";
-import ReportHeader from "./report-header";
 import ReportResult from "./report-result";
 
 export default function ReportCard({ templateID }: { templateID: string }) {
@@ -17,7 +16,6 @@ export default function ReportCard({ templateID }: { templateID: string }) {
 
     return (
         <div className="relative ">
-            <ReportHeader />
             <ReportResult />
         </div>
     );

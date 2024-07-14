@@ -64,11 +64,7 @@ export default function ReportHeader() {
                     <p className="w-28 flex justify-between">
                         SEX <span>:</span>
                     </p>
-                    <select
-                        name="sex"
-                        onSelect={handleSelectChange}
-                        value={sex}
-                    >
+                    <select name="sex" onChange={handleSelectChange}>
                         <option value="M">M</option>
                         <option value="F">F</option>
                         <option value="Others">Others</option>
@@ -134,8 +130,7 @@ export default function ReportHeader() {
                     </p>
                     <input
                         type="text"
-                        value={r_lab_no}
-                        onChange={handleHeaderChange}
+                        defaultValue={2345852}
                         name="r_lab_no"
                         className="italic"
                     />
