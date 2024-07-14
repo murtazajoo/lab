@@ -31,7 +31,7 @@ export default function ReportResult() {
                             <ReportRow
                                 index={i}
                                 res={res}
-                                key={res.normal_range}
+                                key={res.test_name + i}
                             />
                         ))}
                 </TableBody>
