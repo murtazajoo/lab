@@ -57,6 +57,7 @@ export default function ReportRow({
             <TableCell className=" p-3">
                 <input
                     name="result"
+                    placeholder="0"
                     className={cn("w-[40mm]", { "font-extrabold": res.bold })}
                     value={res.result}
                     onChange={handleChange}

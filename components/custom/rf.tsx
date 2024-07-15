@@ -6,9 +6,12 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import { Trash } from "lucide-react";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 export default function RF() {
-    const rf = [
+    const [rf, setRef] = useState([
         {
             test_name: "RHEUMATOID FACTOR (RF)   ",
             options: ["Positive", "Negative", "Positive-Titer"],
@@ -21,7 +24,10 @@ export default function RF() {
             test_name: "ESR WINTROBES METHOD",
             options: [],
         },
-    ];
+    ]);
+    function removeRow(i: number) {
+        setRef(rf.filter((_, index) => index !== i));
+    }
     return (
         <div>
             <Table className="w-[200mm] mx-auto">
@@ -47,6 +53,16 @@ export default function RF() {
                                     <input type="text" />
                                 </div>
                             </TableCell>
+                            <p className="hidden group-hover:flex gap-1 justify-end absolute right-0 opacity-5 hover:opacity-100  top-1/2 -translate-y-1/2">
+                                <Button
+                                    variant={"destructive"}
+                                    className=" hover:opacity-100"
+                                    size={"icon"}
+                                    onClick={() => removeRow(i)}
+                                >
+                                    <Trash size={15} className="p-0" />
+                                </Button>
+                            </p>
                         </TableRow>
                     ))}
                 </TableBody>

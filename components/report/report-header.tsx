@@ -101,6 +101,7 @@ export default function ReportHeader() {
                         type="text"
                         name="patient_id"
                         value={patient_id}
+                        className="min-w-[70mm]"
                         onChange={handleHeaderChange}
                     />
                 </div>

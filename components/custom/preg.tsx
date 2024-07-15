@@ -6,9 +6,12 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import { Trash } from "lucide-react";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 export default function Preg() {
-    const preg = [
+    const [preg, setPreg] = useState([
         {
             test_name: "HEPATITIS B SURFACE ANTIGEN [HBSAG]  ",
             options: ["Positive", "Negative"],
@@ -25,7 +28,11 @@ export default function Preg() {
             test_name: "VENEREAL DISEASE R. L. [VDRL]  ",
             options: ["Reactive", "Non-Reactive"],
         },
-    ];
+    ]);
+
+    function removeRow(i: number) {
+        setPreg(preg.filter((_, index) => index !== i));
+    }
     return (
         <div>
             <Table className="w-[200mm] mx-auto">
@@ -48,6 +55,16 @@ export default function Preg() {
                                     ))}
                                 </select>
                             </TableCell>
+                            <p className="hidden group-hover:flex gap-1 justify-end absolute right-0 opacity-5 hover:opacity-100  top-1/2 -translate-y-1/2">
+                                <Button
+                                    variant={"destructive"}
+                                    className=" hover:opacity-100"
+                                    size={"icon"}
+                                    onClick={() => removeRow(i)}
+                                >
+                                    <Trash size={15} className="p-0" />
+                                </Button>
+                            </p>
                         </TableRow>
                     ))}
                 </TableBody>

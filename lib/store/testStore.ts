@@ -3,6 +3,7 @@ import { create } from "zustand";
 export interface TestReportStore {
     test_report: {
         id: number;
+        temp_id: string;
         name: string;
         sex: string;
         age: string;
@@ -24,13 +25,20 @@ export interface TestReportStore {
     updateTestReportResult: (
         newResult: TestReportStore["test_report"]["result"]
     ) => void;
-    addRow: () => void;
+    addRow: (test: {
+        test_name: string;
+        result: number;
+        unit: string;
+        normal_range: string;
+        bold: boolean;
+    }) => void;
 }
 
 const useTestReportStore = create<TestReportStore>((set) => ({
     test_report: {
         id: 1,
         name: "",
+        temp_id: "",
         sex: "",
         age: "",
         r_o: "",
@@ -46,20 +54,17 @@ const useTestReportStore = create<TestReportStore>((set) => ({
         set((state) => ({
             test_report: { ...state.test_report, result: newResult },
         })),
-    addRow: () =>
+    addRow: (test: {
+        test_name: string;
+        result: number;
+        unit: string;
+        normal_range: string;
+        bold: boolean;
+    }) =>
         set((state) => ({
             test_report: {
                 ...state.test_report,
-                result: [
-                    ...state.test_report.result,
-                    {
-                        test_name: "Test name",
-                        result: 0,
-                        unit: "unit",
-                        normal_range: "--",
-                        bold: false,
-                    },
-                ],
+                result: [...state.test_report.result, test],
             },
         })),
 }));

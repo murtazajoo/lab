@@ -143,35 +143,35 @@ const TEMPLATES: {
         results: [
             {
                 test_name: "Sr. Triglycerides",
-                result: 99.45,
+                result: 0,
                 unit: "Mg/dl",
                 normal_range: "40 - 165",
                 bold: false,
             },
             {
                 test_name: "Sr. Cholesterol",
-                result: 120.62,
+                result: 0,
                 unit: "Mg/dl",
                 normal_range: "120 - 230",
                 bold: false,
             },
             {
                 test_name: "LDL",
-                result: 61.31,
+                result: 0,
                 unit: "Mg/dl",
                 normal_range: "-190",
                 bold: false,
             },
             {
                 test_name: "HDL Cholesterol",
-                result: 39.42,
+                result: 0,
                 unit: "Mg/dl",
                 normal_range: "30 - 100",
                 bold: false,
             },
             {
                 test_name: "VLDL",
-                result: 19.89,
+                result: 0,
                 unit: "Mg/dl",
                 normal_range: "20 - 40",
                 bold: false,
@@ -184,14 +184,14 @@ const TEMPLATES: {
         results: [
             {
                 test_name: "Total Value",
-                result: 2850,
+                result: 0,
                 unit: "ml/24 Hrs",
                 normal_range: "800 - 2000 ml/24 Hrs",
                 bold: false,
             },
             {
                 test_name: "Total Protein",
-                result: 65,
+                result: 0,
                 unit: "mg/24 Hrs",
                 normal_range: "30 - 150 mg/24 Hrs",
                 bold: false,

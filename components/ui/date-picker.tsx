@@ -18,7 +18,9 @@ export default function DatePicker({
 
     useEffect(() => {
         if (defaultDate) {
+            console.log(defaultDate);
             onChange(defaultDate);
+            setDate(defaultDate);
         }
     }, [defaultDate]);
 

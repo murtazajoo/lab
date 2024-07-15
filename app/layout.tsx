@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn("min-h-screen bg-black", inter.className)}>
+            <body className={cn("min-h-screen ", inter.className)}>
                 {children}
             </body>
         </html>

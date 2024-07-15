@@ -7,8 +7,9 @@ import {
 } from "@/components/ui/table";
 import useTestReportStore from "@/lib/store/testStore";
 import ReportRow from "./report-row";
+import { useEffect } from "react";
 export default function ReportResult() {
-    const { test_report, updateTestReportResult } = useTestReportStore(
+    const { test_report, updateTestReport } = useTestReportStore(
         (state) => state
     );
 

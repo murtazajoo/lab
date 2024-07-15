@@ -1,18 +1,44 @@
+import { auth } from "@/lib/firebase/firbaseConfig";
+import { addReport } from "@/lib/firebase/firebase";
+import useTestReportStore from "@/lib/store/testStore";
 import { Printer } from "lucide-react";
 import Image from "next/image";
+import { QRCodeSVG } from "qrcode.react";
 import React, { useRef } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useReactToPrint } from "react-to-print";
 import { Button } from "./ui/button";
-
 export default function ReportCardHolder({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const { test_report, updateTestReport } = useTestReportStore(
+        (state) => state
+    );
     const printRef: any = useRef();
     const handlePrint = useReactToPrint({
         content: () => printRef.current,
     });
+    const handleSave = async () => {
+        try {
+            const id: string = await addReport(test_report);
+            updateTestReport({
+                ...test_report,
+                patient_id: id,
+            });
+            //fake 1sec promise
+            await new Promise((res) => {
+                setTimeout(() => {
+                    res("");
+                }, 1000);
+            });
+            handlePrint();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    const [user] = useAuthState(auth);
     return (
         <>
             <main
@@ -45,11 +71,21 @@ export default function ReportCardHolder({
                     height={1000}
                     className="absolute bottom-0 w-[210mm]"
                 />
+                <div className="absolute bottom-24 left-2">
+                    {test_report.patient_id && (
+                        <QRCodeSVG
+                            value={`https://smdiagnostics.vercel.app/report/${test_report.patient_id}`}
+                            size={100}
+                        />
+                    )}
+                </div>
             </main>
-            <Button onClick={handlePrint} variant={"default"}>
-                <Printer />
-                Print
-            </Button>
+            {user && (
+                <Button onClick={handleSave} variant={"default"}>
+                    <Printer />
+                    Save
+                </Button>
+            )}
         </>
     );
 }

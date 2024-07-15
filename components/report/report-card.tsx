@@ -4,14 +4,20 @@ import { useEffect } from "react";
 import ReportResult from "./report-result";
 
 export default function ReportCard({ templateID }: { templateID: string }) {
-    const { updateTestReportResult } = useTestReportStore((state) => state);
+    const { updateTestReport, test_report } = useTestReportStore(
+        (state) => state
+    );
 
     useEffect(() => {
         const templateData = TEMPLATES.find(
             (t) => t.id === parseInt(templateID)
         );
         if (!templateData) return;
-        updateTestReportResult(templateData.results);
+        updateTestReport({
+            ...test_report,
+            result: templateData.results,
+            temp_id: templateID,
+        });
     }, []);
 
     return (
