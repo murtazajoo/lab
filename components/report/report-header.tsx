@@ -93,9 +93,9 @@ export default function ReportHeader() {
                         onChange={handleHeaderChange}
                     />
                 </div>
-                <div className="flex gap-2 ">
-                    <p className="w-28 flex justify-between">
-                        Patient-Id <span>:</span>
+                {/* <div className="flex gap-2 ">
+                    <p className="w-28 flex justify-between text-xs">
+                        Report-Id <span>:</span>
                     </p>
                     <input
                         type="text"
@@ -104,7 +104,7 @@ export default function ReportHeader() {
                         className="min-w-[70mm]"
                         onChange={handleHeaderChange}
                     />
-                </div>
+                </div> */}
             </div>
             <div className="w-1/2">
                 <div className="flex gap-2 ">

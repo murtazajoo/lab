@@ -3,7 +3,7 @@ import { addReport } from "@/lib/firebase/firebase";
 import useTestReportStore from "@/lib/store/testStore";
 import { Printer } from "lucide-react";
 import Image from "next/image";
-import { QRCodeSVG } from "qrcode.react";
+// import { QRCodeSVG } from "qrcode.react";
 import React, { useRef } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useReactToPrint } from "react-to-print";
@@ -72,12 +72,12 @@ export default function ReportCardHolder({
                     className="absolute bottom-0 w-[210mm]"
                 />
                 <div className="absolute bottom-24 left-2">
-                    {test_report.patient_id && (
+                    {/* {test_report.patient_id && (
                         <QRCodeSVG
                             value={`https://smdiagnostics.vercel.app/report/${test_report.patient_id}`}
                             size={100}
                         />
-                    )}
+                    )} */}
                 </div>
             </main>
             {user && (
