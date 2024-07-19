@@ -43,14 +43,14 @@ export default function RF() {
                             <TableCell className="font-medium p-0 ">
                                 {res.test_name}
                             </TableCell>
-                            <TableCell className=" p-3">
-                                <div className="flex">
+                            <TableCell className=" p-3  ">
+                                <div className="flex w-[]">
                                     <select name="result" className="w-fit">
                                         {res.options.map((option, i) => (
                                             <option key={i}>{option}</option>
                                         ))}
                                     </select>
-                                    <input type="text" />
+                                    <input type="text" className="w-[15mm]" />
                                 </div>
                             </TableCell>
                             <p className="hidden group-hover:flex gap-1 justify-end absolute right-0 opacity-5 hover:opacity-100  top-1/2 -translate-y-1/2">

@@ -34,11 +34,11 @@ export default function GTT() {
                                 defaultValue={0}
                             />
                         </TableCell>
-                        <TableCell className="font-medium p-0 "></TableCell>
+                        <TableCell className="font-medium p-0 w-[25mm] "></TableCell>
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={"60 - 105"}
                             />
@@ -46,7 +46,7 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={"105 - 126"}
                             />
@@ -54,7 +54,7 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={">126"}
                             />
@@ -72,18 +72,18 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={0}
                             />
                         </TableCell>
-                        <TableCell className="font-medium p-0 ">
+                        <TableCell className="font-medium p-0 w-[25mm] ">
                             MGS/DL
                         </TableCell>
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={" < 180"}
                             />
@@ -92,7 +92,7 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={" > 200"}
                             />
@@ -100,31 +100,31 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                             />
                         </TableCell>
                     </TableRow>
 
                     <TableRow className="group relative w-[200mm]">
-                        <TableCell className="font-medium p-0 ">
+                        <TableCell className="font-medium p-0 w-[60mm]">
                             Blood Sugar [2Hrs]
                         </TableCell>
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={0}
                             />
                         </TableCell>
-                        <TableCell className="font-medium p-0 ">
+                        <TableCell className="font-medium p-0 w-[25mm] ">
                             MGS/DL
                         </TableCell>
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={" < 140"}
                             />
@@ -132,7 +132,7 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={"140 - 200"}
                             />
@@ -141,7 +141,7 @@ export default function GTT() {
                         <TableCell className=" p-3">
                             <input
                                 name="result"
-                                className="w-[30mm]"
+                                className="w-[25mm]"
                                 type="text"
                                 defaultValue={">200"}
                             />

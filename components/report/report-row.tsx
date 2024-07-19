@@ -49,7 +49,7 @@ export default function ReportRow({
             <TableCell className="font-medium p-0 ">
                 <input
                     name="test_name"
-                    className="w-[40mm]"
+                    className="w-[40mm] pl-3"
                     value={res.test_name}
                     onChange={handleChange}
                 />
@@ -72,10 +72,10 @@ export default function ReportRow({
                     onChange={handleChange}
                 />
             </TableCell>
-            <TableCell className="text-right p-3">
+            <TableCell>
                 <input
                     name="normal_range"
-                    className="w-[40mm] text-right"
+                    className="w-[40mm] pl-3"
                     value={res.normal_range}
                     onChange={handleChange}
                 />

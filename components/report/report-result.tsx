@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/table";
 import useTestReportStore from "@/lib/store/testStore";
 import ReportRow from "./report-row";
-import { useEffect } from "react";
 export default function ReportResult() {
     const { test_report, updateTestReport } = useTestReportStore(
         (state) => state
@@ -15,15 +14,13 @@ export default function ReportResult() {
 
     return (
         <div className="mt-10 ">
-            <Table className="w-[200mm] mx-auto">
+            <Table className="w-[200mm] mx-auto ">
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[100px]">Test Name</TableHead>
+                        <TableHead>Test Name</TableHead>
                         <TableHead>Result</TableHead>
                         <TableHead>Unit</TableHead>
-                        <TableHead className="text-right pr-0">
-                            Normal Range
-                        </TableHead>
+                        <TableHead>Normal Range</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
